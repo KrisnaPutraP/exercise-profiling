@@ -9,4 +9,5 @@ import org.springframework.stereotype.Repository;
  */
 @Repository
 public interface StudentRepository extends JpaRepository<Student, Long> {
+    Student findFirstByOrderByGpaDesc();    // Equivalent to: SELECT * FROM students ORDER BY gpa DESC LIMIT 1;
 }
